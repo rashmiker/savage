@@ -1,0 +1,145 @@
+Rashmi, 17:02
+custom meta box
+Custom meta boxes in WordPress are a feature that allows you to add additional fields to the edit screens of posts, pages, or custom post types. These fields can store extra information that isn’t included by default in WordPress. Custom meta boxes are often used to collect extra data from users or to provide additional options for content creators.
+
+Rashmi, 17:03
+get post / wp query
+1. get_posts()
+
+    Purpose: get_posts() is a simpler function designed to fetch a list of posts based on specified parameters. It is often used for basic queries where advanced features are not required.
+
+    Return Value: It returns an array of WP_Post objects. By default, it doesn’t include pagination or more complex query features.
+
+2. WP_Query
+
+    Purpose: WP_Query is a more flexible and powerful class that allows for advanced querying of posts. It provides extensive parameters and methods for complex queries, including pagination, custom fields, and taxonomies.
+
+    Return Value: It returns a WP_Query object that contains the queried posts and provides methods to work with the result set.
+
+Rashmi, 17:05
+plugin files rules
+is it ok if there same name folder in plugin root ?
+In WordPress, having folders with the same name in the plugin root directory can lead to potential issues, particularly if the folders are not distinct in their purpose or if there is confusion about their use. Here are some important considerations:
+
+Rashmi, 17:07
+custom theme files
+1. style.css 2. index.php 3. functions.php
+
+Rashmi, 17:10
+  // Enqueue parent theme stylesheet
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+
+    // Enqueue child theme stylesheet
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/custom-style.css', array('parent-style'), wp_get_theme()->get('Version') );
+
+Rashmi, 17:11
+why child theme
+A child theme in WordPress is used to extend or modify the functionality and appearance of a parent theme without altering the parent theme’s files. This approach is highly beneficial for various reasons
+
+Rashmi, 17:16
+hooks
+diff between using example
+
+Action Hooks Example
+
+Scenario: You want to add a custom message at the end of every post.
+
+Code:
+
+php
+
+// Add this code to your theme's functions.php file
+
+function add_custom_message($content) {
+    if (is_single()) {
+        // This will add a custom message to the end of the post content
+        $content .= '<p>Thank you for reading this post!</p>';
+    }
+    return $content;
+}
+add_action('the_content', 'add_custom_message');
+
+Explanation:
+
+    Hook Name: the_content
+    Callback Function: add_custom_message
+    Purpose: The function add_custom_message is hooked to the_content action. This means it will run at the point where WordPress outputs the post content. The function appends a custom message to the end of the content.
+    Type: Action Hook (It runs the function but doesn’t alter the core content processing—although it modifies the output, it's still primarily an action.)
+
+Filter Hooks Example
+
+Scenario: You want to modify the title of each post by adding a prefix.
+
+Code:
+
+php
+
+// Add this code to your theme's functions.php file
+
+function add_prefix_to_title($title, $id) {
+    if (is_singular('post')) {
+        // This will add a prefix to the post title
+        return 'Prefix: ' . $title;
+    }
+    return $title;
+}
+add_filter('the_title', 'add_prefix_to_title', 10, 2);
+
+Rashmi, 17:18
+jquery replace class 
+using attr
+<script>
+        $(document).ready(function() {
+            $('#replaceClassButton').click(function() {
+                $('#myElement').attr('class', 'new-class'); // Directly set the class attribute
+            });
+        });
+    </script>
+
+Rashmi, 17:19
+change color using javascript
+ <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.getElementById('myButton').style.backgroundColor = 'blue'; // Change the background color
+        });
+    </script>
+
+Rashmi, 17:21
+attribute in jquery
+Purpose of .attr()
+
+The .attr() method is essential for:
+
+    Retrieving Attribute Values: To get the value of an attribute from an element.
+    Setting Attribute Values: To assign or modify the value of an attribute on an element.
+    Removing Attributes: (when combined with .removeAttr()) To delete attributes from an element.
+
+Rashmi, 17:23
+types of selector in css
+1. Basic Selectors
+2. Combinator Selectors
+3. Pseudo-classes
+
+
+portfolio
+https://app.renewables.org/
+https://www.ukcosmeticclinic.co.uk/
+
+What is a Text Domain?
+
+    Definition: A text domain is a unique string used to identify a set of translatable strings in your theme or plugin. It is defined in your code and is associated with your translation files.
+    Purpose: It helps WordPress and translation tools map translatable strings to their respective translations in different languages.
+
+.htaccess File
+
+    Role: The .htaccess file is used by the Apache web server to handle URL rewriting rules. WordPress modifies this file to ensure that pretty permalinks work correctly.
+    File Location: The .htaccess file is located in the root directory of your WordPress installation.
+
+REST API stands for Representational State Transfer Application Programming Interface. Let's break down what each component means:
+
+    Representational State Transfer (REST):
+        Representational State Transfer is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol, typically HTTP.
+        REST is designed around the concept of resources, which are identified by URLs. Resources can be manipulated using standard HTTP methods such as GET, POST, PUT, DELETE, etc.
+
+    Application Programming Interface (API):
+        Application Programming Interface refers to a set of rules and tools that allows different software applications to communicate with each other. It defines the methods and data formats that applications can use to request and exchange information.
