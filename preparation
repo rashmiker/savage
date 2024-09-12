@@ -247,3 +247,15 @@ Contributor: A contributor doesn't have the right to publish their post or page.
 Subscriber: Users who are subscribed to your site can log in and update their profile.
 Follower: They don't have any right. They can only read and comment on your post.
 Viewer: They can only read and comment on a post.
+
+
+
+document.ready
+
+Definition: document.ready is a concept primarily associated with jQuery (although modern JavaScript has similar functionality with DOMContentLoaded). It ensures that the DOM (Document Object Model) is fully loaded and ready to be manipulated.
+Purpose: It is used to execute JavaScript code only after the DOM has been fully loaded, which allows for safe manipulation of DOM elements.
+
+onload
+
+Definition: The onload event is triggered when the entire page (including all dependent resources such as images, stylesheets, and subframes) has been fully loaded.
+Purpose: It is used to execute code when everything on the page has finished loading, including all external resources.
