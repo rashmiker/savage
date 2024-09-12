@@ -259,3 +259,37 @@ onload
 
 Definition: The onload event is triggered when the entire page (including all dependent resources such as images, stylesheets, and subframes) has been fully loaded.
 Purpose: It is used to execute code when everything on the page has finished loading, including all external resources.
+
+Common Event Types in javascript
+
+    Mouse Events:
+        click: Occurs when the user clicks on an element.
+        dblclick: Occurs when the user double-clicks on an element.
+        mouseover: Occurs when the mouse pointer is moved onto an element.
+        mouseout: Occurs when the mouse pointer is moved out of an element.
+        mousedown: Occurs when the mouse button is pressed down on an element.
+        mouseup: Occurs when the mouse button is released over an element.
+        mousemove: Occurs when the mouse pointer is moved while over an element.
+
+    Keyboard Events:
+        keydown: Occurs when a key is pressed down.
+        keyup: Occurs when a key is released.
+        keypress: Occurs when a key is pressed and released (deprecated in favor of keydown and keyup).
+
+    Form Events:
+        submit: Occurs when a form is submitted.
+        change: Occurs when the value of a form element changes.
+        focus: Occurs when an element gains focus.
+        blur: Occurs when an element loses focus.
+
+    Window Events:
+        load: Occurs when the entire page (including all dependent resources) is fully loaded.
+        resize: Occurs when the window is resized.
+        scroll: Occurs when the user scrolls the page or an element.
+        unload: Occurs when the document or page is unloaded (less commonly used in modern applications).
+
+    Touch Events (on mobile devices):
+        touchstart: Occurs when a touch point is placed on the touch surface.
+        touchmove: Occurs when a touch point is moved along the touch surface.
+        touchend: Occurs when a touch point is removed from the touch surface.
+        touchcancel: Occurs when the touch event is interrupted (e.g., by an incoming call).
