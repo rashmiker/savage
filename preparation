@@ -189,4 +189,61 @@ Simple "die()" statements
 Custom errors and error triggers
 Error reporting
 
+ MySQL Data Types
+Numeric Data Types
 
+    Integer Types:
+        TINYINT - A very small integer. Range: -128 to 127 (signed) or 0 to 255 (unsigned).
+        SMALLINT - A small integer. Range: -32,768 to 32,767 (signed) or 0 to 65,535 (unsigned).
+        MEDIUMINT - A medium-sized integer. Range: -8,388,608 to 8,388,607 (signed) or 0 to 16,777,215 (unsigned).
+        INT or INTEGER - A standard integer. Range: -2,147,483,648 to 2,147,483,647 (signed) or 0 to 4,294,967,295 (unsigned).
+        BIGINT - A large integer. Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 (signed) or 0 to 18,446,744,073,709,551,615 (unsigned).
+
+    Fixed-Point Types:
+        DECIMAL - A fixed-point number. You specify the precision and scale (e.g., DECIMAL(10,2)).
+        NUMERIC - Similar to DECIMAL and is generally used interchangeably.
+
+    Floating-Point Types:
+        FLOAT - A single-precision floating-point number.
+        DOUBLE - A double-precision floating-point number.
+
+Date and Time Data Types
+
+    Date and Time Types:
+        DATE - A date value. Format: YYYY-MM-DD.
+        DATETIME - A date and time value. Format: YYYY-MM-DD HH:MM:SS.
+        TIMESTAMP - A timestamp value. Format: YYYY-MM-DD HH:MM:SS. Automatically updates to the current timestamp on record updates.
+        TIME - A time value. Format: HH:MM:SS.
+        YEAR - A year value. Format: YYYY.
+
+String Data Types
+
+    Character Types:
+        CHAR - A fixed-length string. You specify the length (e.g., CHAR(10)).
+        VARCHAR - A variable-length string. You specify the maximum length (e.g., VARCHAR(255)).
+
+    Text Types:
+        TINYTEXT - A very small text string. Maximum length: 255 characters.
+        TEXT - A text string. Maximum length: 65,535 characters.
+        MEDIUMTEXT - A medium-sized text string. Maximum length: 16,777,215 characters.
+        LONGTEXT - A large text string. Maximum length: 4,294,967,295 characters.
+
+    Binary Types:
+        BINARY - A fixed-length binary string.
+        VARBINARY - A variable-length binary string.
+        TINYBLOB - A very small binary large object. Maximum length: 255 bytes.
+        BLOB - A binary large object. Maximum length: 65,535 bytes.
+        MEDIUMBLOB - A medium-sized binary large object. Maximum length: 16,777,215 bytes.
+        LONGBLOB - A large binary large object. Maximum length: 4,294,967,295 bytes.
+
+
+How many types of users WordPress have?
+WordPress user role determines access permission to the users of a WordPress site.
+
+Administrator: They have full rights over a site.
+Editor: They deal with the content section of a website.
+Author: They only deal with their posts. They can delete their post even after publishing.
+Contributor: A contributor doesn't have the right to publish their post or page. They need to send it to the administrator for review.
+Subscriber: Users who are subscribed to your site can log in and update their profile.
+Follower: They don't have any right. They can only read and comment on your post.
+Viewer: They can only read and comment on a post.
